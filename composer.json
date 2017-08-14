@@ -3,6 +3,7 @@
     "type": "library",
     "keywords": ["slim", "swagger", "documentation"],
     "prefer-stable": true,
+    "license": "MIT",
     "require": {
         "php": ">=7.1",
         "tebru/gson-php": ">=0.4.0",
