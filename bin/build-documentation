@@ -1,0 +1,20 @@
+#!/usr/bin/env php
+<?php
+
+use Documenter\FakeApp;
+use Documenter\Formatter\SwaggerFormatter;
+
+$loader = require 'vendor/autoload.php';
+
+\Doctrine\Common\Annotations\AnnotationRegistry::registerLoader([$loader, 'loadClass']);
+
+$routesPath = $argv[1];
+$appName = $argv[2];
+$basePath = $argv[3];
+
+$app = new FakeApp($appName);
+$app->setBasePath($basePath);
+require $routesPath;
+
+$formatter = new SwaggerFormatter();
+echo $formatter->getDocumentation($app);

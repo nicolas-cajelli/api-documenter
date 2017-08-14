@@ -1,0 +1,19 @@
+{
+    "name": "nicolas-cajelli/api-documenter",
+    "type": "library",
+    "keywords": ["slim", "swagger", "documentation"],
+    "prefer-stable": true,
+    "require": {
+        "php": ">=7.1",
+        "tebru/gson-php": ">=0.4.0",
+        "jan-swiecki/simple-annotations": ">=0.3.1"
+    },
+    "bin": [
+        "bin/build-documentation"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Documenter\\": "src/"
+        }
+    }
+}
